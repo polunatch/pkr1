@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Арифметичні операції з1</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Арифметичні операції з двома числами</h2>
+    
+    <script>
+        let num1 = parseFloat(prompt("Введіть перше число:"));
+        let num2 = parseFloat(prompt("Введіть друге число:"));
+        let sum = num1 + num2;
+        let difference = num1 - num2;
+        let product = num1 * num2;
+        let quotient = num1 / num2;
+        let remainder = num1 % num2;
+        document.write(`<p>Сума: ${num1} + ${num2} = ${sum}</p>`);
+        document.write(`<p>Різниця: ${num1} - ${num2} = ${difference}</p>`);
+        document.write(`<p>Добуток: ${num1} * ${num2} = ${product}</p>`);
+        document.write(`<p>Частка: ${num1} / ${num2} = ${quotient}</p>`);
+        document.write(`<p>Залишок від ділення: ${num1} % ${num2} = ${remainder}</p>`);
+    </script>
+</body>
+</html>
+
+"Завдання 2"
+const age = parseInt(prompt("введіть ваш вік:"));
+if (age >= 18) {
+    console.log("Ви є повнолітнім.");
+} else {
+    console.log("Ви не є повнолітнім.");
+}
+
+"Завдання 3"
+const hasSubscription = confirm("Чи є у вас абонемент? (OK - так, Cancel - ні)");
+const balance = parseFloat(prompt("Скільки у вас грошей на рахунку?"));
+
+if (hasSubscription || balance > 100) {
+    console.log("Доступ дозволено");
+} else {
+    console.log("Доступ заборонено");
+}
+
+
+"Завдання 4"
+const number = parseInt(prompt("Введіть число:"));
+const result = number % 2 === 0 ? "парне" : "непарне";
+console.log(result);
+
+
+"Завдання 5"
+let balance = parseFloat(prompt("Введіть початковий баланс:"));
+
+balance += 500 ; 
+balance -= 200;
+balance *= 1.05;
+
+console.log(`Підсумковий баланс: ${balance.toFixed(2)} грн`);
+
+
+"Завдання 6"
+const dayNumber = parseInt(prompt("введіть день тижня (1-7):"));
+let dayName;
+switch (dayNumber) {
+    case 1: dayName = "понеділок"; break;
+    case 2: dayName = "вівторок"; break;
+    case 3: dayName = "середа"; break;
+    case 4: dayName = "четвер"; break;
+    case 5: dayName = "п'ятниця"; break;
+    case 6: dayName = "субота"; break;
+    case 7: dayName = "неділя"; break;
+    default: dayName = "невірний номер дня";
+}
+
+console.log(dayName);
+
+"завдання 7"
+const a = parseInt(prompt("введіть перше число:"));
+const b = parseInt(prompt("Введіть друге число:"));
+
+console.log(`a & b (AND): ${a & b}`);
+console.log(`a | b (OR): ${a | b}`);
+console.log(`a ^ b (XOR): ${a ^ b}`);
+console.log(`a << 1: ${a << 1}`);
+console.log(`b >> 1: ${b >> 1}`);
