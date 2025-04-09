@@ -1,0 +1,33 @@
+"Завдання 1"
+function calculateRectangleArea(width, height) {
+  return width*height;
+}
+
+console.log(calculateRectangleArea(5, 10));//50
+
+"Завдання 2"
+function isEven(number) {
+    return number % 2 === 0;
+  }
+  
+  console.log(isEven(4));//true
+  console.log(isEven(7));//false
+
+  "Завдання 3"
+function greetUser(name) {
+    console.log(`Привіт, ${name}!`);
+  }
+  
+  greetUser("Іване");//Привіт, Іване!
+
+  "Завдання 4"
+function sumArray(numbers) {
+    return numbers.reduce((sum, num) => sum + num, 0);
+  }
+  console.log(sumArray([1, 2, 3, 4])); // 10
+
+  "Завдання 5"
+function maxOfThree(a, b, c) {
+    return Math.max(a, b, c);
+  }
+  console.log(maxOfThree(5, 9, 2)); // 9
