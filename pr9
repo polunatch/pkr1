@@ -1,0 +1,76 @@
+--1--
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="elementToHide">Цей елемент зникне при кліку на кнопку</div>
+  <button id="hideButton">Приховати елемент</button>
+
+  <script>
+    document.getElementById('hideButton').addEventListener('click', function() {
+      const element = document.getElementById('elementToHide');
+      element.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
+--2--
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="selfHidingButton">Клікніть на мене</button>
+
+  <script>
+    document.getElementById('selfHidingButton').addEventListener('click', function() {
+      this.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
+--3--
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .tree span {
+      cursor: pointer;
+    }
+    .tree ul {
+      margin-left: 20px;
+      display: none;
+    }
+    .tree .open > ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <ul class="tree">
+    <li><span>Родина тварин</span>
+      <ul>
+        <li><span>Ссавці</span>
+          <ul>
+            <li>Кіт</li>
+            <li>Собака</li>
+            <li>Корова</li>
+          </ul>
+        </li>
+        <li><span>Птахи</span>
+          <ul>
+            <li>Голуб</li>
+            <li>Папуга</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    document.querySelectorAll('.tree span').forEach(span => {
+      span.addEventListener('click', function() {
+        const parentLi = this.parentNode;
+        parentLi.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
