@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div data-widget-name="menu">Виберіть жанр</div>
+  
+  <script>
+    const widgetElement = document.querySelector('[data-widget-name]');
+    const widgetName = widgetElement.getAttribute('data-widget-name');
+    console.log(widgetName); // "menu"
+  </script>
+</body>
+</html>
