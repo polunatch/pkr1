@@ -1,0 +1,60 @@
+--1--
+const student = {
+  name: "Kovalenko Vyacheslav",
+  specialty: "174",
+  averageGrade: 8,
+  missedClasses: 5,
+  getInfo: function() {
+    return `Студент ${this.name}, спеціальність ${this.specialty}, середній бал ${this.averageGrade}, пропущено занять ${this.missedClasses}`;
+  }
+};
+
+const student1 = {
+  name: "Данило Пустовойт",
+  specialty: "174",
+  averageGrade: 9.5,
+  missedClasses: 3
+};
+
+const student2 = {
+  name: "Анастасія Гречаниченко",
+  specialty: "174",
+  averageGrade: 10.2,
+  missedClasses: 6
+};
+
+const student3 = {
+  name: "Віктор Довбиш",
+  specialty: "174",
+  averageGrade: 8.7,
+  missedClasses: 2
+};
+
+console.log(student.getInfo.call(student1));
+console.log(student.getInfo.apply(student2));
+const boundInfo = student.getInfo.bind(student3);
+console.log(boundInfo());
+--2--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Визначення</title>
+</head>
+<body>
+  <button id="htmlBtn">HTML</button>
+  <button id="cssBtn">CSS</button>
+  
+  <script>
+    function showHtmlDefinition() {
+      alert("HTML (HyperText Markup Language)");
+    }
+    
+    function showCssDefinition() {
+      alert("CSS (Cascading Style Sheets)");
+    }
+    
+    document.getElementById('htmlBtn').addEventListener('click', showHtmlDefinition);
+    document.getElementById('cssBtn').addEventListener('click', showCssDefinition);
+  </script>
+</body>
+</html>
