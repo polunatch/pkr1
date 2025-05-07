@@ -1,0 +1,22 @@
+function Calculator() {
+  this.a = 0;
+  this.b = 0;
+
+  this.read = function() {
+    this.a = parseFloat(prompt("Введіть перше число:", 0));
+    this.b = parseFloat(prompt("Введіть друге число:", 0));
+  };
+
+  this.sum = function() {
+    return this.a + this.b;
+  };
+
+  this.mul = function() {
+    return this.a * this.b;
+  };
+}
+
+const calculator = new Calculator();
+calculator.read();
+alert(`Сума: ${calculator.sum()}`);
+alert(`Добуток: ${calculator.mul()}`);
